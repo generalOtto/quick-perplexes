@@ -71,10 +71,8 @@
         tab with your search already running.
       </p>
       <p>
-        The extension has no backend, collects no data, and requires only the
-        <code style="font-family:monospace;font-size:13px;color:var(--accent-light)">tabs</code>
-        permission (to open the new tab). It is free and open-source under the MIT
-        license.
+        The extension has no backend, collects no data, and requests no special
+        permissions. It is free and open-source under the MIT license.
       </p>
       <div class="callout">
         <span class="callout-icon">✨</span>
@@ -325,7 +323,7 @@
         </div>
         <div class="arch-card">
           <h4>manifest.json</h4>
-          <p>MV3 manifest. Declares the <code style="font-size:12px">tabs</code> permission, the content script, the service worker, and <code style="font-size:12px">overlay.css</code> as a web-accessible resource.</p>
+          <p>MV3 manifest. Declares the content script, the service worker, and <code style="font-size:12px">overlay.css</code> as a web-accessible resource.</p>
         </div>
       </div>
 
@@ -383,6 +381,16 @@ isOpen = !isOpen;</div>
     <!-- ── Changelog ── -->
     <div class="docs-section" id="changelog">
       <h2><span class="section-icon">📋</span> Version history</h2>
+
+      <div class="changelog-entry">
+        <div class="changelog-header">
+          <span class="changelog-tag">v1.1.2</span>
+          <span class="changelog-date">2026-10-29</span>
+        </div>
+        <div class="changelog-desc">
+          <strong>No permissions required.</strong> Dropped the unneeded <code style="font-family:monospace;font-size:12px">tabs</code> permission &mdash; opening Perplexity from the toolbar icon with <code style="font-family:monospace;font-size:12px">chrome.tabs.create</code> works without it.
+        </div>
+      </div>
 
       <div class="changelog-entry">
         <div class="changelog-header">
